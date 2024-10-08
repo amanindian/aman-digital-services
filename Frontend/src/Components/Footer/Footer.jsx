@@ -17,7 +17,7 @@ export default function Footer() {
         <h3 className='Footer-subheading'>Quick Links</h3>
         <ul className='footer-navbar'>
           {FooterMenu.QuickLinks.map((Item, i) => {
-            return <li key={i}>  <NavLink className='menu-item' to={Item.URL}  >{Item.Name}</NavLink>  </li>
+            return <li key={i}>  <NavLink className='menu-item before-icon' to={Item.URL}  >{Item.Name}</NavLink>  </li>
           })}
         </ul>
       </div>

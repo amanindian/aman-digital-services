@@ -3,7 +3,7 @@ import { ProjectInfoContext } from "../../Context/ProjectInfo";
 import { NavLink, Link } from "react-router-dom";
 import "./NavBar.css";
 import { StateContext } from "../../Context/StateProvider";
-import Shop_bnr_Image from '../../Assets/Primary Images/Welcome.jpg'
+import Shop_bnr_Image from '../../Assets/Primary Images/Aman Digital Services Banner.jpg'
 
 
 
@@ -46,8 +46,11 @@ export default function NavBar() {
         </div>
       </div>
       <nav className="navmenu container">
-        <NavLink className="logo" to="/" title="Click Here">
+        <NavLink className="logo desktop-item" to="/" title="Click Here">
           {SiteTitle}
+        </NavLink>
+        <NavLink className="logo mobile-item" to="/" title="Click Here">
+          ADS
         </NavLink>
         <input type="radio" name="slider" id="menu-btn" />
         <label htmlFor="menu-btn" className="mobile-item menu-trigger-btn">
@@ -56,7 +59,6 @@ export default function NavBar() {
         <input type="radio" name="slider" id="close-btn" />
 
         <ul className="navbar">
-
           <label htmlFor="close-btn" className="mobile-item menu-close-btn">
             <i className="fa-solid fa-x"></i>
           </label>
@@ -66,12 +68,12 @@ export default function NavBar() {
             </NavLink>
           </li>
           <li className="menu-item">
-            <NavLink className="menu-link" to="/About">
+            <NavLink className="menu-link" to="/about">
               About
             </NavLink>
           </li>
           <li className="menu-item">
-            <NavLink className="menu-link desktop-item" to="/Shop">
+            <NavLink className="menu-link desktop-item" to="/shop">
               Shop
             </NavLink>
             <input type="checkbox" id="showMega" />
@@ -84,28 +86,28 @@ export default function NavBar() {
                 <div className="row">
                   <NavLink className='main-mega-link' to="/category/electronic">Electronic</NavLink>
                   <ul className="mega-links">
-                    <li><NavLink to="/category/laptop">Laptop</NavLink></li>
+                    <li><NavLink to="/category/laptops">Laptop</NavLink></li>
                     <li><NavLink to="/category/mobile">Mobile</NavLink></li>
                     <li><NavLink to="/category/smartphones"> Smartphones</NavLink></li>
-                    <li><NavLink to="/category/"></NavLink></li>
+                    <li><NavLink to="/category/accessories">Accessories </NavLink></li>
                   </ul>
                 </div>
                 <div className="row">
                   <NavLink className='main-mega-link' to="/category/man">Man </NavLink>
                   <ul className="mega-links">
                     <li><Link to="/category/clothing">Clothing </Link></li>
-                    <li><Link to="/category/Footwear">Footwear </Link></li>
-                    <li><Link to="/category/Skincare">Skincare</Link></li>
-                    <li><Link to="/category/Decoration">Decoration</Link></li>
+                    <li><Link to="/category/footwear">Footwear </Link></li>
+                    <li><Link to="/category/skincare">Skincare</Link></li>
+                    <li><Link to="/category/home-decoration">Decoration</Link></li>
                   </ul>
                 </div>
                 <div className="row">
-                  <NavLink className='main-mega-link' to="/category/man">Women </NavLink>
+                  <NavLink className='main-mega-link' to="/category/woman">Women </NavLink>
                   <ul className="mega-links">
                     <li><Link to="/category/clothing">Clothing </Link></li>
-                    <li><Link to="/category/Footwear">Footwear </Link></li>
-                    <li><Link to="/category/Accessories">Accessories</Link></li>
-                    <li><Link to="/category/Featured">Featured</Link></li>
+                    <li><Link to="/category/footwear">Footwear </Link></li>
+                    <li><Link to="/category/fragrances">Fragrances</Link></li>
+                    <li><Link to="/category/skincare">Skincare</Link></li>
                   </ul>
                 </div>
               </div>
@@ -113,11 +115,11 @@ export default function NavBar() {
 
           </li>
           <li className="menu-item">
-            <NavLink className="menu-link desktop-item" to="/Services">
+            <NavLink className="menu-link desktop-item" to="/services">
               Services
             </NavLink>
             <input type="checkbox" id="showDrop" />
-            <label htmlFor="showDrop" className="mobile-item menu-link">Dropdown Menu</label>
+            <label htmlFor="showDrop" className="mobile-item menu-link">Our Services</label>
             <ul className="drop-menu">
               {Services.map((Item, Index) => {
                 return <li key={Index}><NavLink to={`/${Item.Name.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-{2,}/g, '-')}  `} >{Item.Name}</NavLink></li>
@@ -125,12 +127,12 @@ export default function NavBar() {
             </ul>
           </li>
           <li className="menu-item">
-            <NavLink className="menu-link" to="/Blog">
-              Blog
+            <NavLink className="menu-link" to="/blogs">
+              Blogs
             </NavLink>
           </li>
           <li className="menu-item">
-            <NavLink className="menu-link" to="/Contact">
+            <NavLink className="menu-link" to="/contact">
               Contact Us
             </NavLink>
           </li>

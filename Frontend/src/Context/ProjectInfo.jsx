@@ -1,4 +1,4 @@
-import WelcomeImage from "../Assets/Primary Images/Welcome.jpg";
+import WelcomeImage from "../Assets/Primary Images/welcome-to-aman-digital-services.jpg";
 import Banner_1 from "../Assets/Primary Images/Aman Digital Services Banner.jpg";
 import React, { createContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -18,7 +18,6 @@ export default function ProjectInfo({ children }) {
         Email: "amanparariya@gmail.com",
         Phone_Number: 8002579962,
         Address: "Aman Kumar, Parariya, Sarsar , Siwan, Bihar, 841226",
-
         Services: [
             {
                 Name: "Web Designing",
@@ -55,8 +54,8 @@ export default function ProjectInfo({ children }) {
                     URL: "/cart",
                 },
                 {
-                    Name: "Blog",
-                    URL: "/blog",
+                    Name: "Blogs",
+                    URL: "/blogs",
                 },
                 {
                     Name: "Contact Us",
@@ -148,21 +147,21 @@ export default function ProjectInfo({ children }) {
 
         BannerData: [
             {
-                url: {Banner_1},
+                url: { Banner_1 },
                 Heading: "Up to 30% Off",
                 Description:
                     "Elevate Your Online Presence with Aman Digital Services - Expert Web Development, Design, and Marketing Solutions for Business Success!",
                 Alt: "Aman Digital Services Banner 1 services"
             },
             {
-                url: {Banner_1},
+                url: { Banner_1 },
                 Heading: "Up to 30% Off",
                 Description:
                     "Transform Your Digital Strategy Today - Unlock Growth Potential with Aman Digital Services' Tailored Solutions and Proven Expertise.",
                 Alt: "Aman Kumar, Founder of Aman Digital Services"
             },
             {
-                url: {Banner_1},
+                url: { Banner_1 },
                 Heading: "Up to 30% Off",
                 Description:
                     "Drive Results with Aman Digital Services - Craft Compelling Online Experiences That Stand Out in a Crowded Digital Landscape",
@@ -190,28 +189,28 @@ export default function ProjectInfo({ children }) {
             {
                 id: 1,
                 Title: "E-Commerce",
-                Description: `Experience seamless e-commerce solutions with Aman Digital Services. From custom website development to intuitive user interfaces, we specialize in creating dynamic online stores that drive conversions and maximize revenue. Our comprehensive e-commerce services encompass everything you need to succeed in the digital marketplace, including secure payment gateways, inventory management systems, and strategic marketing initiatives. With a focus on user experience and functionality, we ensure that your e-commerce platform not only attracts customers but also keeps them coming back for more. Trust Aman Digital Services to elevate your online retail business and achieve unparalleled success in the competitive e-commerce landscape.`,
+                Description: `Get seamless e-commerce solutions with Aman Digital Services. From custom website development to user friendly interfaces we create dynamic online stores that convert and make money. Our e-commerce services cover everything you need to succeed in the digital world including secure payment gateways, inventory management systems and strategic marketing plans. We focus on user experience and functionality so your e-commerce platform attracts customers and keeps them coming back for more. Trust Aman Digital Services to take your online retail to new heights and succeed in the e-commerce world.`,
                 Icon: "fa-shop",
                 Image: undefined,
             },
             {
                 id: 2,
                 Title: "Web Development",
-                Description: `At Aman Digital Services, we specialize in providing comprehensive Web development solutions tailored to meet your unique business needs. Our team of experienced developers leverages the latest technologies and industry best practices to create dynamic and responsive websites that engage your audience and drive results. From custom website design to e-commerce development and everything in between, we offer end-to-end solutions to help you establish a powerful online presence. Whether you're a small startup or a large enterprise, trust Aman Digital Services to deliver exceptional web development services that elevate your brand and propel your business forward.`,
+                Description: `At Aman Digital Services we provide full web development solutions for your business. Our team of developers use the latest technology and industry standards to create dynamic and responsive websites that connect with your audience and deliver results. From custom website design to e-commerce development and everything in between we offer full solutions to help you have a strong online presence. Whether you are a small startup or a large enterprise trust Aman Digital Services to deliver great web development services for your brand and business.`,
                 Image: undefined,
                 Icon: "fa-code",
             },
             {
                 id: 3,
                 Title: "Digital Services",
-                Description: `At Aman Digital Services, we specialize in providing comprehensive web development solutions tailored to meet your unique business needs. Our team of experienced developers leverages the latest technologies and industry best practices to create dynamic and responsive websites that engage your audience and drive results. From custom website design to e-commerce development and everything in between, we offer end-to-end solutions to help you establish a powerful online presence. Whether you're a small startup or a large enterprise, trust Aman Digital Services to deliver exceptional web development services that elevate your brand and propel your business forward.`,
+                Description: `At Aman Digital Services we offer full web development services to fit your business needs. Our team of developers use the latest technology and industry standards to build dynamic and responsive websites that will engage your audience and get results. From custom website design to e-commerce development and everything in between we offer end to end solutions to help you establish an online presence. Whether you’re a small startup or a big enterprise, trust Aman Digital Services to deliver top web development services that will boost your brand and business.`,
                 Image: undefined,
                 Icon: "fa-computer",
             },
             {
                 id: 4,
                 Title: "Banking Services",
-                Description: `Discover seamless banking solutions tailored to your needs with Aman Digital Services. Our comprehensive suite of banking services encompasses everything from online account management to secure transactions and personalized financial advice. Whether you're a small business looking to streamline your financial operations or an individual seeking convenient banking options, we have you covered. With a focus on user-friendly interfaces and cutting-edge security measures, we ensure a smooth and secure banking experience for all our clients. Trust Aman Digital Services to empower you with the tools and resources you need to manage your finances efficiently and achieve your financial goals. `,
+                Description: `Get banking solutions that fit you with Aman Digital Services. Our banking services cover everything from online account management to secure transactions and personalized financial advice. Whether you’re a small business looking to simplify your financial or an individual looking for easy banking options, we’ve got you covered. User friendly interfaces and latest security measures to ensure a smooth and secure banking experience for all our customers. Trust Aman Digital Services to give you the tools and resources to manage your finances and achieve your goals. `,
                 Image: undefined,
                 Icon: "fa-building-columns",
             },

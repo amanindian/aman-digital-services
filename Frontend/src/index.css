@@ -13,9 +13,11 @@ html {
 body {
   background-color: var(--background-first);
 }
+
 i {
   font-family: "Font Awesome 5 Free";
 }
+
 a,
 p,
 h1,
@@ -50,6 +52,7 @@ html {
 :root {
   --first-color: #fff;
   --secund-color: #002fff;
+  --text-color: #000;
   --clr-sec: #fc7819;
   --third-color: #24262d;
   --background-first: #f8f8ff;
@@ -73,6 +76,9 @@ li {
 .btn {
   cursor: pointer;
 }
+.title{
+  color: var(--secund-color);
+}
 
 .container {
   padding: 0 50px;
@@ -90,4 +96,18 @@ h2 {
 
 .text-center {
   text-align: center;
+}
+
+/* Tab  */
+@media (min-width:768px) and (max-width:1024px){
+  .container {
+    padding: 0 20px;
+  }
+}
+
+/* Phone */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
 }

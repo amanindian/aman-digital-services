@@ -107,14 +107,14 @@
   font-weight: 600;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
   .product {
     max-width: 30%;
     min-width: 25%;
   }
 }
 
-@media (max-width: 700px) and (min-width: 500px) {
+@media (max-width: 768px) and (min-width: 480px) {
   .product {
     max-width: auto;
     min-width: 40%;

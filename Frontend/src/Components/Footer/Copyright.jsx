@@ -5,7 +5,7 @@ export default function Copyright() {
         <div className="copyright container">
             <p>
                 Copyright © Aman Digital Services Website Designed and Developed By
-                <a href="https://amanindian.netlify.app/" title="Click Here"> Er. Aman Kumar</a>
+                <a href="https://amanindian.netlify.app/" title="Know About Aman Kumar" target="_blank" rel="noreferrer" > Er. Aman Kumar</a>
             </p>
         </div>
     );

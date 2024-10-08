@@ -80,9 +80,35 @@
   padding: 20px;
 }
 
-@media screen and (max-width: 1000px) {
+@media (min-width:767px) and (max-width: 1000px) {
   .tab-content {
     flex-direction: column;
     padding: 10px;
   }
+  .tab-content .tab-text{
+    width: 85%;
+  }
+  .tab{
+    margin: 30px 50px;
+  }
+
+  .tab-buttons button{
+    font-size: 20px;
+    margin: 10px;
+    width: 120%;
+  }
+
+  .tab-buttons button.active:after {
+    width: 50px;
+    height: 50px;
+  }
+  
 }
+
+
+@media screen and (max-width:767px) {
+  .tab{
+    display:none;
+  }
+}
+

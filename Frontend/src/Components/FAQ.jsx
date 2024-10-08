@@ -15,7 +15,7 @@ const FAQ = () => {
 
 
     return (
-        <div className="container faq-section">
+        <section className="container faq-section">
             <div className="faq">
                 <h2 className='faq-title'>Frequently Asked Questions
                 </h2>
@@ -32,7 +32,7 @@ const FAQ = () => {
             <div className="faq">
                 <img src={FAQ_Image} className='faq-side-image' alt="Aman Digital Services Frequently Asked Question" />
             </div>
-        </div>
+        </section>
     );
 };
 

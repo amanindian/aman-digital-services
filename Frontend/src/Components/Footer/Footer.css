@@ -35,7 +35,7 @@
   margin-bottom: 10px;
 }
 
-.footer-navbar .menu-item {
+.menu-item {
   color: var(--first-color);
   padding: 5px 0;
   display: block;
@@ -43,6 +43,21 @@
 .footer-navbar .menu-item i {
   font-size: 15px;
   margin-right: 5px;
+}
+
+.quick-links li {
+  position: relative;
+}
+.quick-links li::before {
+  position: absolute;
+  top: 8px;
+  left: -18px;
+  height: 100%;
+  content: "\f101";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: var(--e-global-color-primary);
+  font-size: 12px;
 }
 .social-icons {
   display: flex;
@@ -55,14 +70,16 @@
   /* margin:10px; */
 }
 
-
-@media only screen and (max-width:900px) {
+@media only screen and (max-width: 1024) {
   .footer-column {
     max-width: 50%;
+    width: 47%;
   }
 }
-@media only screen and (max-width:600px) {
+
+@media only screen and (max-width: 768px) {
   .footer-column {
     max-width: 100%;
+    width: 100%;
   }
 }

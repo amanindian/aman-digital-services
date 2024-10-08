@@ -15,12 +15,14 @@ export default function Banner() {
                 {BannerData.map((slideImage, index) => (
                     <div key={index}>
                         <div className='banner-image' title={slideImage.Alt} style={{ 'backgroundImage': `url("${slideImage.url.Banner_1}")` }}>
-                            <h2 className='banner-heading'>{slideImage.Heading}</h2>
+                            <h4 className='banner-heading'>{slideImage.Heading}</h4>
                             <p className='banner-description'>{slideImage.Description}</p>
                         </div>
                     </div>
                 ))}
             </Slide>
+
+            
         </section>
     )
 }

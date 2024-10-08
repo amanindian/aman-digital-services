@@ -14,9 +14,9 @@ export default function RelatedProducts({ productParma }) {
         // This is for Related Products 
 
         async function fetchProduct() {
-            const categorysName = ProductList.find((e) => e.Id === productParma).Categories;
+            const categoriesName = ProductList.find((e) => e.Id === productParma).Categories;
             let filteredProducts = ProductList.map(item => {
-                const matchingCategories = item.Categories.filter(category => categorysName.includes(category));
+                const matchingCategories = item.Categories.filter(category => categoriesName.includes(category));
                 return { ...item, matchCount: matchingCategories.length };
             }).filter(item => item.matchCount > 0)
                 .sort((a, b) => b.matchCount - a.matchCount)
@@ -39,7 +39,6 @@ export default function RelatedProducts({ productParma }) {
                         return <Product Item={Item} key={Item.Id} />
                     })
                 }
-
             </div>
         </section>
     )

@@ -11,14 +11,15 @@ export default function Welcome({ button }) {
             <div className="welcome-text">
                 <h1 className='welcome-title'>Welcome to {SiteTitle}</h1>
                 <p className='welcome-description'>
-                    Welcome to Aman Digital Services, your premier destination for top-notch web development, design, and digital marketing solutions. Founded by Aman Kumar in March 2020 near Siwan, Bihar, our company boasts over 5 years of experience dedicated to crafting compelling online experiences that drive business success. Our comprehensive suite of services is meticulously designed to optimize your online presence and enhance brand visibility.
+                    Welcome to Aman Digital Services, your one stop solution for web development, design and digital marketing. Founded by Aman Kumar in March 2020 near Siwan, Bihar, we have 5+ years of experience in creating awesome online experiences that drive business results. Our services are designed to boost your online presence and brand visibility.
+
                     <br />
                     <br />
-                    At Aman Digital Services, we understand the importance of search engine optimization (SEO) in today's competitive digital landscape. That's why our team of experts is committed to implementing cutting-edge SEO strategies to boost your website's visibility and drive organic traffic. From keyword research to on-page optimization, we'll help you climb the search engine rankings and stand out from the crowd.
+                    At Aman Digital Services we know the importance of search engine optimization (SEO) in today’s digital world. That’s why our team of experts are committed to implement latest SEO strategies to increase your website visibility and organic traffic. From keyword research to on-page optimization, we will help you climb the search engine rankings and stand out from the crowd.
                     <br />
                     <br />
-                    When you partner with Aman Digital Services, you're not just getting a service provider – you're gaining a trusted ally dedicated to your success. We take the time to understand your unique goals and objectives, ensuring that our solutions are tailored to meet your specific needs. Experience the difference with Aman Digital Services and unlock the full potential of your online presence.
-                </p>
+
+                    When you partner with Aman Digital Services, you’re not just getting a service provider – you’re getting a trusted friend who will help you succeed. We take the time to understand your unique goals and objectives so our solutions are tailored to your needs. Try Aman Digital Services and unlock your online potential.                </p>
                 {button && <Link to="/about" className='welcome-button'>Know More</Link>}
             </div>
             <div className="welcome-image">

@@ -19,6 +19,8 @@ export const registerController = async (req, res) => {
         error: "Password is required",
       });
     }
+
+
     //Check Existing costumer
     const existUser = await userModels.findOne({ email });
     if (existUser) {
@@ -27,11 +29,11 @@ export const registerController = async (req, res) => {
         message: "Already register please login",
       });
     }
-    
-    //Register User
-    const hashedPassword =await hashPassword(password);
 
-    const user =await new userModels({
+    //Register User
+    const hashedPassword = await hashPassword(password);
+
+    const user = await new userModels({
       name,
       email,
       phone,

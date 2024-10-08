@@ -109,7 +109,7 @@
 }
 
 .navmenu {
-  background: var(--first-color);
+  background: var(--background-first);
   box-shadow: 0 10px 10px -10px var(--secund-color);
   display: flex;
   align-items: center;
@@ -210,7 +210,7 @@
   visibility: hidden;
 }
 .mega-box .content {
-  background: var(--first-color);
+  background: var(--background-first);
   padding: 25px 20px;
   display: flex;
   width: 100%;
@@ -275,7 +275,7 @@
   }
 }
 
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 1024px) {
   .navmenu .btn {
     display: block;
   }
@@ -335,10 +335,10 @@
   #showMega:checked ~ .mega-box {
     max-height: 100%;
   }
-  .navbar .desktop-item {
+  .navmenu .desktop-item {
     display: none;
   }
-  .navbar .mobile-item {
+  .navmenu .mobile-item {
     display: block;
     font-size: 20px;
     font-weight: 500;
@@ -404,8 +404,15 @@
   }
 
   .menu-trigger-btn {
+    display: inline !important;
     i {
       font-size: 30px;
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .topinfo {
+    display: none;
   }
 }

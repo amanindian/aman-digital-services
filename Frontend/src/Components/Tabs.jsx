@@ -21,7 +21,7 @@ const Tabs = () => {
         {
           TabsData.map((e) => {
             return (
-              <button key={e.id} onClick={() => handleTabClick(e)} className={activeTab.id === e.id ? "active" : ""}
+              <button key={e.id} onClick={() => handleTabClick(e)} className={activeTab.id === e.id ? "active" : "tab-btn"}
               >{e.Title}</button>
             )
           })
@@ -33,7 +33,7 @@ const Tabs = () => {
 
       <div className="tab-content">
         <div className="tab-text">
-          <h2 className='tab-title'>{activeTab.Title}</h2>
+          <h3 className='tab-title'>{activeTab.Title}</h3>
           <p className='tab-description'>{activeTab.Description}</p>
         </div>
         <div className="tab-image">
