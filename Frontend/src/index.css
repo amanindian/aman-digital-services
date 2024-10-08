@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=DM+Sans:ital,opsz,wght@0,9..40,100;1,9..40,400&family=Pacifico&family=Raleway:wght@200;400;500;600&family=Syne:wght@400;500&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background-first);
+}
+i {
+  font-family: "Font Awesome 5 Free";
+}
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+input,
+input::placeholder,
+button,
+textarea::placeholder,
+option,
+select,
+label,
+div {
+  /* font-family: "DM Sans", sans-serif;
+  font-family: "Raleway", sans-serif; */
+  font-family: var(--first-font);
+}
+
+::selection {
+  background: var(--third-color);
+  color: var(--first-color);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --first-color: #fff;
+  --secund-color: #002fff;
+  --clr-sec: #fc7819;
+  --third-color: #24262d;
+  --background-first: #f8f8ff;
+  --first-font: "Syne", sans-serif;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.container {
+  padding: 0 50px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.text-center {
+  text-align: center;
+}

@@ -1,0 +1,49 @@
+.counter {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: var(--third-color);
+}
+.achievement-title{
+  text-align: center;
+  color: var(--first-color);
+  margin-bottom: 20px;
+  font-size: 35px;
+}
+.achievements {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.counter-box {
+  box-shadow: 0 0 3px var(--first-color);
+  padding-top: 15px;
+  color: var(--first-color);
+  min-width: 20%;
+}
+.counter-box .increment {
+  text-align: center;
+  font-family: var(--first-font);
+  padding-bottom: 15px;
+  font-size: 35px;
+}
+.counter-box .counter-title {
+  text-align: center;
+  background-color: var(--secund-color);
+  padding: 10px 20px;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 900px) {
+  .counter-box {
+    min-width: 40%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .counter-box {
+    min-width: 100%;
+  }
+}

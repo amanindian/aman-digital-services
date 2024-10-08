@@ -1,0 +1,88 @@
+.tab {
+  display: flex;
+  background: var(--third-color);
+  margin: 30px 100px;
+  justify-content: space-between;
+  border-radius: 35px;
+  padding: 0;
+}
+.tab-buttons {
+  width: 28%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.tab-buttons button.active {
+  background-color: var(--secund-color) !important;
+  border-radius: 25px;
+  position: relative;
+}
+.tab-buttons button.active:after {
+  position: absolute;
+  content: "";
+  background-color: aliceblue;
+  content: "\eac9"; /* Unicode for Google Material Icon */
+  font-family: "Material Icons";
+  background: var(--third-color);
+  right: 0;
+  width: 60px;
+  height: 60px;
+  top: 0;
+  margin: 7px;
+  font-size: 21px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab-buttons button {
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  font-size: 30px;
+  color: var(--first-color);
+  cursor: pointer;
+  padding: 19px;
+  margin: 20px 35px;
+  position: relative;
+  width: 100%;
+  text-align: start;
+  font-weight: 500;
+}
+
+.tab-content {
+  width: 75%;
+  background-color: var(--background-first);
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  border-radius: 30px;
+  justify-content: space-around;
+  border: 2px solid var(--third-color);
+}
+.tab-content .tab-text {
+  width: 70%;
+}
+.tab-content .tab-text .tab-title {
+  font-size: 40px;
+}
+.tab-content .tab-text .tab-description {
+  font-size: 18px;
+  text-align: justify;
+}
+.tab-content i {
+  width: 30%;
+  font-size: 200px;
+  text-align: center;
+  padding: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+  .tab-content {
+    flex-direction: column;
+    padding: 10px;
+  }
+}

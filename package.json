@@ -1,0 +1,22 @@
+{
+  "name": "aman_digital_services",
+  "version": "1.0.0",
+  "description": "This is the Full Stack MERN Project Aman Digital Services this is made by Aman Kumar this site provide Digital Services and E Commerce Services ",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "Aman Kumar",
+  "license": "Aman Digital Services",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.4",
+    "express": "^4.18.2",
+    "mongoose": "^8.1.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.3"
+  }
+}

@@ -1,0 +1,411 @@
+.topinfo {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: var(--third-color);
+  column-gap: 10px;
+  row-gap: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.topinfo > div {
+  min-width: 40%;
+  width: 45%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+.top-contact-info a {
+  color: var(--first-color);
+  padding: 10px 15px;
+  font-size: 18px;
+}
+
+.top-contact-info a:hover {
+  color: var(--clr-sec);
+}
+.top-contact-info a svg {
+  padding: 0 5px;
+  font-size: 15px;
+}
+
+.top-button-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+.top-button-info .enquiry-btn {
+  padding: 8px 10px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid var(--first-color);
+  color: var(--first-color);
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+.top-button-info .enquiry-btn:hover {
+  background-color: var(--clr-sec);
+}
+
+.top-button-info .search-box {
+  border: 1px solid var(--first-color);
+  border-radius: 10px;
+  overflow: hidden;
+  justify-content: space-between;
+  display: flex;
+}
+
+.top-button-info .search-box .search-felid {
+  border: 0;
+  background: transparent;
+  border-radius: 5px;
+  color: var(--first-color);
+  padding: 8px 10px;
+  outline: none;
+  font-size: 20px;
+  width: 150px;
+  transition: all 1s;
+}
+
+.top-button-info .search-box .search-felid::placeholder {
+  color: var(--first-color);
+}
+
+.top-button-info .search-box .search-felid:focus {
+  width: 200px;
+}
+
+/* Navbar CSS */
+.logo {
+  font-family: "Pacifico", cursive;
+  font-size: 30px;
+  color: var(--secund-color);
+  padding: 5px 10px;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.logo:hover {
+  color: var(--third-color);
+}
+
+.top-button-info .search-box .search-btn {
+  padding: 8px 10px;
+  background: var(--first-color);
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--third-color);
+  outline: none;
+  border: 0;
+  width: 40px;
+}
+
+.navmenu {
+  background: var(--first-color);
+  box-shadow: 0 10px 10px -10px var(--secund-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  position: relative;
+}
+
+.navmenu .navbar {
+  display: flex;
+  column-gap: 30px;
+}
+.navmenu .navbar .menu-item {
+  list-style: none;
+  padding: 20px 0;
+}
+
+.menu-link,
+.drop-menu a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--secund-color);
+  position: relative;
+}
+.navmenu .navbar .menu-link::before,
+.navmenu .navbar .drop-menu li a::before {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  content: "";
+  background: var(--clr-sec);
+  transition: all 0.5s;
+}
+.navmenu .navbar .drop-menu li a::before {
+  bottom: 0;
+}
+.menu-link.active::before,
+.navmenu .navbar .drop-menu li a.active::before {
+  width: 100% !important;
+}
+
+.navmenu .navbar .menu-link:hover::before,
+.navmenu .navbar .drop-menu li a:hover::before {
+  width: 100%;
+}
+
+.menu-link.active,
+.menu-link:hover {
+  color: var(--clr-sec);
+}
+.navbar li .drop-menu {
+  position: absolute;
+  background: var(--first-color);
+  width: 230px;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.navbar li {
+  z-index: 10;
+}
+.navbar li:hover .drop-menu,
+.navbar li:hover .mega-box {
+  transition: all 0.3s ease;
+  top: 80%;
+  opacity: 1;
+  visibility: visible;
+}
+.drop-menu li a {
+  width: 100%;
+  display: block;
+  padding: 5px 0 5px 5px;
+  font-weight: 400;
+  border-radius: 0px;
+}
+
+.navmenu .mobile-item {
+  display: none;
+}
+
+.navmenu input {
+  display: none;
+}
+
+/* Mega Menu CSS */
+.mega-box {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 0 30px;
+  top: 85px;
+  opacity: 0;
+  visibility: hidden;
+}
+.mega-box .content {
+  background: var(--first-color);
+  padding: 25px 20px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+.mega-box .content .row {
+  width: calc(25% - 30px);
+  line-height: 45px;
+}
+.content .row img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.content .row header {
+  font-size: 20px;
+  font-weight: 500;
+}
+.content .row .mega-links {
+  margin-left: -40px;
+  border-left: 1px solid rgba(255, 255, 255, 0.09);
+}
+.row .mega-links li {
+  padding: 0 20px;
+}
+.row .mega-links li a {
+  color: var(--secund-color);
+  padding: 0px;
+  padding: 0 20px;
+  font-size: 17px;
+  display: block;
+}
+.row .mega-links li a:hover {
+  color: var(--secund-color);
+}
+.navmenu .btn {
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+.navmenu .btn.close-btn {
+  position: absolute;
+  right: 30px;
+  top: 10px;
+}
+
+.content .row .main-mega-link {
+  font-size: 23px;
+  font-weight: bold;
+  padding: 0;
+  color: var(--secund-color);
+}
+
+.menu-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  i {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .navmenu .btn {
+    display: block;
+  }
+  .navmenu .navbar {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 350px;
+    top: 0;
+    left: -100%;
+    background: var(--first-color);
+    display: block;
+    padding: 50px 10px;
+    line-height: 50px;
+    overflow-y: auto;
+    z-index: 5;
+    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.18);
+    transition: all 0.3s ease;
+  }
+  /* custom scroll bar */
+  .navmenu .navbar::-webkit-scrollbar {
+    width: 10px;
+  }
+  .navmenu .navbar::-webkit-scrollbar-track {
+    background: #242526;
+  }
+  .navmenu .navbar::-webkit-scrollbar-thumb {
+    background: #3a3b3c;
+  }
+  #menu-btn:checked ~ .navbar {
+    left: 0%;
+  }
+  #menu-btn:checked ~ .btn.menu-btn {
+    display: none;
+  }
+  #close-btn:checked ~ .btn.menu-btn {
+    display: block;
+  }
+  .navbar li a {
+    padding: 0 20px;
+    display: block;
+    font-size: 20px;
+  }
+  .navmenu .navbar .drop-menu {
+    position: static;
+    opacity: 1;
+    top: 65px;
+    visibility: visible;
+    padding-left: 20px;
+    width: 100%;
+    max-height: 0px;
+    overflow: hidden;
+    box-shadow: none !important;
+    transition: all 0.3s ease;
+  }
+  #showDrop:checked ~ .drop-menu,
+  #showMega:checked ~ .mega-box {
+    max-height: 100%;
+  }
+  .navbar .desktop-item {
+    display: none;
+  }
+  .navbar .mobile-item {
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+
+  .drop-menu li {
+    margin: 0;
+  }
+  .drop-menu li a {
+    border-radius: 5px;
+    font-size: 18px;
+  }
+
+  .mega-box {
+    position: static;
+    top: 65px;
+    opacity: 1;
+    visibility: visible;
+    padding: 0 20px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .mega-box .content {
+    box-shadow: none;
+    flex-direction: column;
+    padding: 20px 20px 0 20px;
+  }
+  .mega-box .content .row {
+    width: 100%;
+    margin-bottom: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .mega-box .content .row:nth-child(1),
+  .mega-box .content .row:nth-child(2) {
+    border-top: 0px;
+  }
+  .content .row .mega-links {
+    border-left: 0px;
+    padding-left: 15px;
+  }
+  .row .mega-links li {
+    margin: 0;
+  }
+  .content .row .main-mega-link {
+    font-size: 23px;
+    font-weight: bold;
+    padding: 0;
+    color: var(--secund-color);
+  }
+
+  .menu-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    i {
+      font-size: 30px;
+    }
+  }
+
+  .menu-trigger-btn {
+    i {
+      font-size: 30px;
+    }
+  }
+}
