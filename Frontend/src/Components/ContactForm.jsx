@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './ContactForm.css';
+import axios from 'axios';
+
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -20,10 +22,16 @@ const ContactForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // Handle form submission logic here
-    console.log(formData);
+    try {
+      console.log(process.env.REACT_APP_API)
+      const formSubmit = await axios.post(`${process.env.REACT_APP_API}/contact`, formData)
+      console.log(formSubmit)
+    } catch (error) {
+      console.error(error)
+    }
   };
 
   return (
@@ -63,7 +71,7 @@ const ContactForm = () => {
           name="service"
           value={formData.service}
           onChange={handleChange}
-          required
+
         >
           <option value="">Select a service</option>
           <option value="Web Designing">Web Designing</option>
@@ -81,7 +89,7 @@ const ContactForm = () => {
           name="subject"
           value={formData.subject}
           onChange={handleChange}
-          required
+
         />
       </div>
       <div className="form-group">
@@ -89,7 +97,6 @@ const ContactForm = () => {
           name="contactMethod"
           value={formData.contactMethod}
           onChange={handleChange}
-          required
         >
           <option value="">Select a preferred contact method</option>
           <option value="Phone">Phone</option>
@@ -104,7 +111,6 @@ const ContactForm = () => {
           name="message"
           value={formData.message}
           onChange={handleChange}
-          required
         ></textarea>
       </div>
       <button type="submit">Submit</button>

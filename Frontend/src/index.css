@@ -14,32 +14,6 @@ body {
   background-color: var(--background-first);
 }
 
-i {
-  font-family: "Font Awesome 5 Free";
-}
-
-a,
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-span,
-input,
-input::placeholder,
-button,
-textarea::placeholder,
-option,
-select,
-label,
-div {
-  /* font-family: "DM Sans", sans-serif;
-  font-family: "Raleway", sans-serif; */
-  font-family: var(--first-font);
-}
-
 ::selection {
   background: var(--third-color);
   color: var(--first-color);
@@ -59,6 +33,32 @@ html {
   --first-font: "Syne", sans-serif;
 }
 
+i {
+  font-family: "Font Awesome 5 Free";
+}
+
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+input,
+input::placeholder,
+button,
+textarea,
+textarea::placeholder,
+option,
+select,
+label,
+div {
+  /* font-family: "DM Sans", sans-serif;
+  font-family: "Raleway", sans-serif; */
+  font-family: var(--first-font);
+}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -76,7 +76,7 @@ li {
 .btn {
   cursor: pointer;
 }
-.title{
+.title {
   color: var(--secund-color);
 }
 
@@ -88,26 +88,42 @@ h2 {
   font-size: 35px;
 }
 
-.products {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
 .text-center {
   text-align: center;
 }
+.products {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
 
 /* Tab  */
-@media (min-width:768px) and (max-width:1024px){
+@media (min-width: 768px) and (max-width: 1024px) {
   .container {
     padding: 0 20px;
+  }
+
+  .products {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
   }
 }
 
 /* Phone */
 @media screen and (max-width: 768px) {
   .container {
-    padding: 0 10px;
+    padding: 10px;
+  }
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+/* Small Phone */
+@media screen and (max-width: 480px) {
+  .products {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
   }
 }

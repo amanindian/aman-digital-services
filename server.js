@@ -3,6 +3,8 @@ import dotenv from "dotenv";
 import morgan from "morgan";
 import connectDB from "./Config/DB.js";
 import authRouter from "./routes/authRoute.js";
+import contactRoute from "./routes/contactRoute.js"
+import cors from 'cors'
 
 const app = express();
 
@@ -15,12 +17,14 @@ const PORT = process.env.PORT || 8080;
 //Connecting DataBase
 connectDB();
 
-// middleware
+// Middleware
 app.use(express.json());
+app.use(cors()); //This is for skip Cross Origin Error means Client and Server Error Not Come 
 app.use(morgan("dev")); //This is using because if we hit api then this will inform in console
 
 //Routes
 app.use("/api/v1/auth", authRouter);
+app.use("/", contactRoute);
 
 app.get("/", (req, res) => {
   res.send("I am Aman Kumar Pandey");
