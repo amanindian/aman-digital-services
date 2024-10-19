@@ -1,15 +1,6 @@
 import WelcomeImage from "../Assets/Primary Images/welcome-to-aman-digital-services.jpg";
 import Banner_1 from "../Assets/Primary Images/Aman Digital Services Banner.jpg";
 import React, { createContext } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faBars,
-    faEnvelopeOpen,
-    faPhone,
-    faSearch,
-    faShoppingCart,
-    faXmark,
-} from "@fortawesome/free-solid-svg-icons";
 export const ProjectInfoContext = createContext();
 
 export default function ProjectInfo({ children }) {
@@ -35,14 +26,6 @@ export default function ProjectInfo({ children }) {
                 Name: "E-Commerce Development"
             }
         ],
-        Icons: {
-            Phone: <FontAwesomeIcon icon={faPhone} />,
-            Email: <FontAwesomeIcon icon={faEnvelopeOpen} />,
-            Search: <FontAwesomeIcon icon={faSearch} />,
-            Bar: <FontAwesomeIcon icon={faBars} />,
-            Cart: <FontAwesomeIcon icon={faShoppingCart} />,
-            X: <FontAwesomeIcon icon={faXmark} />,
-        },
         FooterMenu: {
             QuickLinks: [
                 {
@@ -60,6 +43,14 @@ export default function ProjectInfo({ children }) {
                 {
                     Name: "Contact Us",
                     URL: "/contact",
+                },
+                {
+                    Name: "Login",
+                    URL: "/login",
+                },
+                {
+                    Name: "Register",
+                    URL: "/register",
                 },
             ],
             ContactInfo: [

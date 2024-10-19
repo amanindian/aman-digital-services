@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./App.css";
 import NavBar from "./Components/Header/NavBar";
 import Footer from "./Components/Footer/Footer";
@@ -17,12 +19,15 @@ import Category from "./Components/Shop/Category";
 import Breadcrumb from "./Components/Breadcrumb";
 import Banner from './Components/Header/Banner'
 import Services from "./Page/Services";
+import Login from "./Page/Login";
+import Register from "./Page/Register";
 
 
 function App() {
   return (
     <BrowserRouter>
       <NavBar />
+      <ToastContainer />
       <EnquirePopup />
       <ProductQuickView />
       <main>
@@ -44,6 +49,8 @@ function App() {
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/cart" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/*" Component={PageNotFound} />
         </Routes>
       </main>

@@ -5,18 +5,17 @@ import useCustomHook from '../Hooks/useCustomHook';
 
 export default function Product({ Item }) {
     const [ShowProduct, handleProductQuickView] = useCustomHook();
-
     return (
         <React.Fragment>
-            <div className="product" >
-                <div className='product-image'><img src={Item.Image} alt={Item.Title} />
+            <li className="product" >
+                <div className='product-image'><img src="https://cdn.mos.cms.futurecdn.net/fYiknYQteLSt8emoFfNWNH.jpg" alt={Item.Title} />
                     <div className="product-image-layer">
                         <h3>{Item.Title}</h3>
-                        <i className="fa-solid fa-cart-plus" title="Add To Cart"></i>
-                        <i className="fa-solid fa-arrow-up-right-from-square" title="View" onClick={() => {
+                        <i className="material-icons" title="Add To Cart">shopping_cart</i>
+                        <i className="material-symbols-outlined" title="View" onClick={() => {
                             ShowProduct(Item.Id)
                             window.scrollTo(0, 0)
-                        }} ></i>
+                        }} >bubble</i>
                     </div>
                 </div>
 
@@ -26,14 +25,14 @@ export default function Product({ Item }) {
                         <div className='product-cnt'>
                             <p className='product-rating'>{
                                 Array(Number.parseInt(Item.Rating)).fill(0).map((e, i) => {
-                                    return <i className="fa-solid fa-star color-yellow" key={i}></i>
+                                    return <i className="material-icons color-yellow" key={i}>star</i>
                                 })
                             }
                                 {
                                     Array(5 - Number.parseInt(Item.Rating)).fill(0).map((e, i) => {
-                                        return <i className="fa-regular fa-star" key={Item.Rating + i}></i>
+                                        return <i className="material-icons color-yellow" key={Item.Rating + i}>star_half</i>
                                     })
-                                }
+                                }                                {/* <i className="material-symbols-outlined color-yellow" >star</i> can be use*/}
                             </p>
                             <p className='product-price'>{Item.Ragular_Price}</p>
                         </div>
@@ -42,7 +41,7 @@ export default function Product({ Item }) {
                         handleProductQuickView(Item.Id)
                     }}>Quick View</button>
                 </div>
-            </div>
+            </li>
         </React.Fragment>
     )
 }

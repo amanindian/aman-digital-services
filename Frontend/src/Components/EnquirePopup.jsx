@@ -52,11 +52,12 @@ export default function EnquirePopup() {
       <section className="popup" >
         <div className="enq-popup" ref={popupRef}>
           <i
-            className="fa-solid fa-xmark btn-popup-close"
+            className="material-symbols-outlined btn-popup-close"
             onClick={() => {
               setIsEnquirePopup(false);
             }}
-          ></i>
+          >close</i>
+
           <h2 className="enq-popup-title">Enquire Now</h2>
           <form className="enq-form" onSubmit={handleSubmit}>
             <input

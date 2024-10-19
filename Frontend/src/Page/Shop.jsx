@@ -11,11 +11,11 @@ export default function Shop() {
       {/* <aside className=''>
         s
       </aside> */}
-      <div className="products">
+      <ul className="products">
         {ProductsData.map((Item) => {
           return <Product Item={Item} key={Item.Id} />
         })}
-      </div>
+      </ul>
 
     </section>
   )

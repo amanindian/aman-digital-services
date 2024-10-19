@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Allura&family=DM+Sans:ital,opsz,wght@0,9..40,100;1,9..40,400&family=Pacifico&family=Raleway:wght@200;400;500;600&family=Syne:wght@400;500&display=swap");
+/* Syne Font  */
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap");
 
 * {
   box-sizing: border-box;
@@ -31,10 +32,6 @@ html {
   --third-color: #24262d;
   --background-first: #f8f8ff;
   --first-font: "Syne", sans-serif;
-}
-
-i {
-  font-family: "Font Awesome 5 Free";
 }
 
 a,
@@ -81,7 +78,10 @@ li {
 }
 
 .container {
-  padding: 0 50px;
+  width: 100%;
+  max-width: 1600px;
+  margin: auto;
+  padding: 0 20px;
 }
 
 h2 {
@@ -95,6 +95,7 @@ h2 {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
+  padding: 15px 0;
 }
 
 /* Tab  */
@@ -126,4 +127,34 @@ h2 {
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
   }
+}
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 {
+  font-size: 18px;
+}
+.material-icons.md-24 {
+  font-size: 24px;
+}
+.material-icons.md-36 {
+  font-size: 36px;
+}
+.material-icons.md-48 {
+  font-size: 48px;
+}
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark {
+  color: rgba(0, 0, 0, 0.54);
+}
+.material-icons.md-dark.md-inactive {
+  color: rgba(0, 0, 0, 0.26);
+}
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light {
+  color: rgba(255, 255, 255, 1);
+}
+.material-icons.md-light.md-inactive {
+  color: rgba(255, 255, 255, 0.3);
 }

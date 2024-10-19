@@ -53,6 +53,9 @@
 .product:hover .product-image-layer {
   height: 100%;
 }
+.product:hover .product-image-layer h3 {
+  font-weight: 500;
+}
 
 .product-content {
   position: relative;
@@ -76,6 +79,7 @@
   border: 0;
   font-size: 20px;
   cursor: pointer;
+  outline: none;
 }
 .product:hover .product-content-layer {
   height: 100%;
@@ -95,10 +99,11 @@
   justify-content: space-between;
 }
 .product-rating .color-yellow {
-  color: yellow;
+  color: #f4af0a;
 }
+
 .product-rating i {
-  font-size: 13px;
+  font-size: 20px;
 }
 .product-price {
   font-size: 20px;

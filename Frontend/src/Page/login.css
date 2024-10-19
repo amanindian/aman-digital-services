@@ -1,0 +1,18 @@
+#login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#login-page .login-form-container {
+  padding: 20px;
+  width: 600px;
+}
+
+.radio-selector {
+  display: flex;
+  gap: 20px;
+  label {
+    display: flex;
+    gap: 5px;
+  }
+}

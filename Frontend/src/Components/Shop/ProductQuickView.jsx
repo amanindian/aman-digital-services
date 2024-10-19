@@ -85,14 +85,14 @@ export default function ProductQuickView() {
                 <div className="product-quick-view" ref={popupRef}>
                     <div className="product-image-section">
                         <i
-                            className="fa-solid fa-xmark btn-qv-close"
+                            className="material-symbols-outlined btn-qv-close"
                             onClick={() => {
                                 setProductQuickView((prevState) => ({
                                     ...prevState,
                                     condition: false,
                                 }));
                             }}
-                        ></i>
+                        >close</i>
                         <div>
                             <img
                                 className="product-main-image"
@@ -165,17 +165,15 @@ export default function ProductQuickView() {
                                 .fill(0)
                                 .map((e, i) => {
                                     return (
-                                        <i className="fa-solid fa-star color-yellow" key={i}></i>
+                                        <i class="material-icons color-yellow" key={i}>star</i>
                                     );
                                 })}
                             {Array(5 - Number.parseInt(product.Rating))
                                 .fill(0)
                                 .map((e, i) => {
                                     return (
-                                        <i
-                                            className="fa-regular fa-star"
-                                            key={Number.parseInt(product.Rating) + i}
-                                        ></i>
+                                        <i class="material-symbols-outlined color-yellow" key={Number.parseInt(product.Rating) + i}
+                                        >star</i>
                                     );
                                 })}
                         </p>

@@ -16,22 +16,27 @@ export default function Contact() {
 
           <a href="tel:918002579962" className="contact-card">
             <div className="icon">
-              <i className="fas fa-phone-alt"></i>
+              <i className="material-symbols-outlined">
+                call
+              </i>
             </div>
             <h3>Call Us</h3>
             <p>+91-8002579962</p></a>
 
           <a href="mailto:amanparariya@gmail.com" className="contact-card">
             <div className="icon">
-              <i className="fas fa-envelope"></i>
+              <i className="material-symbols-outlined">
+                mail
+              </i>
             </div>
             <h3>Email Us</h3>
             <p>amanparariya@gmail.com</p>
           </a>
           <div className="contact-card">
             <div className="icon">
-              <i className="fas fa-map-marker-alt"></i>
-            </div>
+            <i className="material-symbols-outlined">
+            location_on
+              </i>            </div>
             <h3>Our Location</h3>
             <p>Siwan, Bihar, 841226</p>
           </div>

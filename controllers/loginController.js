@@ -20,7 +20,7 @@ export const loginController = async (req, res) => {
         //Check Existing costumer
         const user = await userModels.findOne({ email });
         if (!user) {
-            res.status(404).send({
+            res.status(200).send({
                 success: false,
                 message: "User Not Available",
             });
@@ -29,7 +29,7 @@ export const loginController = async (req, res) => {
 
         const match = await comparePassword(password, user.password);
         if (!match) {
-            res.status(400).send({
+            res.status(200).send({
                 success: false,
                 message: "Invalid Password",
             });
@@ -44,7 +44,6 @@ export const loginController = async (req, res) => {
                     Phone: user.phone,
                     address: user.address || "Address Not Available"
                 },
-                ggg: process.env.JWT_SECRET,
                 token
             });
         }
@@ -52,7 +51,7 @@ export const loginController = async (req, res) => {
 
     } catch (error) {
         console.error(error);
-        res.status(500).send({
+        res.status(400).send({
             success: false,
             message: "Error in Login",
             error

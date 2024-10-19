@@ -17,11 +17,18 @@ const userSchema = new mongoose.Schema(
       required: true,
     },
     phone: {
-      type: String,
+      type: Number,
+      required: true,
     },
     role: {
       type: Number,
       default: 0,
+    },
+    gender: {
+      type: String,
+    },
+    address: {
+      type: String,
     },
   },
   { timestamps: true }

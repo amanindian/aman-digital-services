@@ -40,9 +40,12 @@
     background-color: var(--secund-color);
     color: #fff;
     border-radius: 50%;
-    padding: 15px;
     margin-bottom: 10px;
-    display: inline-block;
+    align-items: center;
+    width: 50px;
+    aspect-ratio: 1;
+    justify-content: center;
+    display: inline-flex;
   }
 
   .contact-card h3 {

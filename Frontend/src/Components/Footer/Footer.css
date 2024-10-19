@@ -1,18 +1,14 @@
-.footer {
+#footer {
   background: var(--third-color);
   color: var(--first-color);
-  display: flex;
-  column-gap: 20px;
-  row-gap: 30px;
-  justify-content: space-between;
-  flex-wrap: wrap;
   padding-top: 30px;
   padding-bottom: 30px;
 }
-
-.footer-column {
-  min-width: 15%;
-  max-width: 25%;
+.footer-columns {
+  display: grid;
+  grid-template-columns: 5fr 2fr 4fr 4fr;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .footer-logo {
@@ -40,6 +36,9 @@
   padding: 5px 0;
   display: block;
 }
+.footer-navbar.menus {
+  padding-left: 20px;
+}
 .footer-navbar .menu-item i {
   font-size: 15px;
   margin-right: 5px;
@@ -53,9 +52,8 @@
   top: 8px;
   left: -18px;
   height: 100%;
-  content: "\f101";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
+  content: "\e9ba";
+  font-family: "Material Icons";
   color: var(--e-global-color-primary);
   font-size: 12px;
 }
@@ -70,16 +68,14 @@
   /* margin:10px; */
 }
 
-@media only screen and (max-width: 1024) {
-  .footer-column {
-    max-width: 50%;
-    width: 47%;
+@media only screen and (max-width: 1024px) {
+  .footer-columns {
+    grid-template-columns: 5fr 4fr;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .footer-column {
-    max-width: 100%;
-    width: 100%;
+  .footer-columns {
+    grid-template-columns: 1fr;
   }
 }

@@ -107,16 +107,14 @@ section#product-section {
   color: var(--first-color);
   border-radius: 10px;
   padding-right: 40px;
+  overflow: hidden;
   position: relative;
 }
 .product-cart-quantity .add-to-cart::after {
-  content: "\f07a";
+  content: "\e854";
   position: absolute;
   right: 10px;
-  margin: auto;
-  height: 100%;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
+  font-family: "Material Symbols Outlined";
   color: var(--e-global-color-primary);
 }
 

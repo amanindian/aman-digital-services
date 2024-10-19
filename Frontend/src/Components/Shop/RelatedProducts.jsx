@@ -32,14 +32,14 @@ export default function RelatedProducts({ productParma }) {
 
     return (
         <section className='container related-products'>
-            <h1>Related Products</h1>
-            <div className="products">
+            <h2 className='related-product-heading'>Related Products</h2>
+            <ul className="products">
                 {
                     products.map((Item) => {
                         return <Product Item={Item} key={Item.Id} />
                     })
                 }
-            </div>
+            </ul>
         </section>
     )
 }

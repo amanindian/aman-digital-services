@@ -16,29 +16,31 @@ const Tabs = () => {
     })
   }, [activeTab, TabsData])
   return (
-    <section className='tab container'>
-      <div className="tab-buttons">
-        {
-          TabsData.map((e) => {
-            return (
-              <button key={e.id} onClick={() => handleTabClick(e)} className={activeTab.id === e.id ? "active" : "tab-btn"}
-              >{e.Title}</button>
-            )
-          })
-        }
-      </div>
-
-
-
-
-      <div className="tab-content">
-        <div className="tab-text">
-          <h3 className='tab-title'>{activeTab.Title}</h3>
-          <p className='tab-description'>{activeTab.Description}</p>
+    <section id='tab'>
+      <div className="container tab">
+        <div className="tab-buttons">
+          {
+            TabsData.map((e) => {
+              return (
+                <button key={e.id} onClick={() => handleTabClick(e)} className={activeTab.id === e.id ? "active" : "tab-btn"}
+                >{e.Title}</button>
+              )
+            })
+          }
         </div>
-        <div className="tab-image">
-          {activeTab.Image && <img src={activeTab.Image} alt="" />}
-          {activeTab.Icon && <i className={"fa-solid " + activeTab.Icon}></i>}
+
+
+
+
+        <div className="tab-content">
+          <div className="tab-text">
+            <h3 className='tab-title'>{activeTab.Title}</h3>
+            <p className='tab-description'>{activeTab.Description}</p>
+          </div>
+          <div className="tab-image">
+            {activeTab.Image && <img src={activeTab.Image} alt="" />}
+            {activeTab.Icon && <i className={"fa-solid " + activeTab.Icon}></i>}
+          </div>
         </div>
       </div>
     </section>

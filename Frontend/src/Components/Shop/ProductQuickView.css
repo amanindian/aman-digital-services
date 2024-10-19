@@ -55,3 +55,6 @@
   }
 }
 /* More CSS of Quick Product View is in the ProductDetails.css */
+.product-rating{
+  display: flex;
+}

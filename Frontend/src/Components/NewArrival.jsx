@@ -8,13 +8,13 @@ const NewArrival = () => {
   return (
     <section className="container new-arrivals">
       <h2 className='title text-center '>New Arrival</h2>
-      <div className="new-arrivals products">
+      <ul className="new-arrivals products">
         {
           ProductsList.slice(0, 5).map((Item) => {
             return <Product Item={Item} key={Item.Id} />
           })
         }
-      </div>
+      </ul>
 
     </section>
   )

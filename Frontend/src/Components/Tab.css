@@ -1,7 +1,10 @@
+#tab {
+  padding: 20px;
+}
 .tab {
   display: flex;
   background: var(--third-color);
-  margin: 30px 100px;
+  margin: 30px auto;
   justify-content: space-between;
   border-radius: 35px;
   padding: 0;
@@ -80,19 +83,19 @@
   padding: 20px;
 }
 
-@media (min-width:767px) and (max-width: 1000px) {
+@media (min-width: 767px) and (max-width: 1000px) {
   .tab-content {
     flex-direction: column;
     padding: 10px;
   }
-  .tab-content .tab-text{
+  .tab-content .tab-text {
     width: 85%;
   }
-  .tab{
+  .tab {
     margin: 30px 50px;
   }
 
-  .tab-buttons button{
+  .tab-buttons button {
     font-size: 20px;
     margin: 10px;
     width: 120%;
@@ -102,13 +105,10 @@
     width: 50px;
     height: 50px;
   }
-  
 }
 
-
-@media screen and (max-width:767px) {
-  .tab{
-    display:none;
+@media screen and (max-width: 767px) {
+  .tab {
+    display: none;
   }
 }
-

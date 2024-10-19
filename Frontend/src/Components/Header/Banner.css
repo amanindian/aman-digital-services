@@ -25,9 +25,8 @@
 .banner-image .banner-heading {
   display: block;
   width: 100%;
-  margin-bottom: -140px;
   font-size: 40px;
-  /* font-family: var(--first-font); */
+  margin:10px 0;
 }
 .banner-image .banner-description {
   display: block;

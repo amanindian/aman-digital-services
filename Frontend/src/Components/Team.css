@@ -41,8 +41,8 @@
   .social-icons a {
     border: 2px solid var(--clr-sec);
     border-radius: 50%;
-    width: 33px;
-    height: 33px;
+    width: 35px;
+    aspect-ratio: 1;
     align-items: center;
     display: flex;
     transition: all 0.5s;
@@ -54,6 +54,9 @@
     i {
       color: #fff;
     }
+    svg {
+      fill: #fff;
+    }
   }
 
   .social-icons a i {
@@ -62,7 +65,11 @@
     margin: auto;
     font-size: 20px;
   }
-
+  .social-icons a svg {
+    width: 22px;
+    margin: auto;
+    fill: var(--clr-sec);
+  }
   .other-team {
     width: 35%;
     display: flex;
