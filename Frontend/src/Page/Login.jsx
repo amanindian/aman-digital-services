@@ -3,6 +3,7 @@ import axios from 'axios';
 import "./login.css"
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { useAuth } from '../Context/Auth';
 
 
 
@@ -10,6 +11,9 @@ import { toast } from 'react-toastify';
 export default function Login() {
 
     const navigate = useNavigate()
+    const [auth, setAuth] = useAuth()
+
+
     const [formData, setFormData] = useState({
         email: '',
         password: ''
@@ -29,6 +33,15 @@ export default function Login() {
         try {
             const res = await axios.post(`${process.env.REACT_APP_API}/api/v1/auth/login/`, formData)
             if (res && res.data.success) {
+                setAuth({
+                    ...auth,
+                    user: res.data.user,
+                    token: res.data.token
+                })
+                localStorage.auth = JSON.stringify({
+                    user: res.data.user,
+                    token: res.data.token
+                })
                 toast.success(res.data.message)
                 navigate("/")
                 window.scrollTo(0, 0)
@@ -43,8 +56,8 @@ export default function Login() {
     };
 
     return (
-        <div id="login-page">
-            <div className="container login-form-container">
+        <div className="auth-page">
+            <div className="container form-container">
                 <form className="contact-form " onSubmit={handleSubmit}>
                     <h2 >Login</h2>
                     <div className="form-group">

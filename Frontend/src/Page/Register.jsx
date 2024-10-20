@@ -49,8 +49,8 @@ export default function Register() {
     };
 
     return (
-        <div id="login-page">
-            <div className="container login-form-container">
+        <div className="auth-page">
+            <div className="container form-container">
                 <form className="contact-form " onSubmit={handleSubmit}>
                     <h2 >Register New User</h2>
                     <div className="form-group">

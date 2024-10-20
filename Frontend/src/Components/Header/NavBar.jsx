@@ -1,9 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ProjectInfoContext } from "../../Context/ProjectInfo";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import "./NavBar.css";
 import { StateContext } from "../../Context/StateProvider";
+import { useAuth } from "../../Context/Auth";
 import Shop_bnr_Image from '../../Assets/Primary Images/Aman Digital Services Banner.jpg'
+import { toast } from "react-toastify";
 
 
 
@@ -12,7 +14,8 @@ export default function NavBar() {
     useContext(ProjectInfoContext);
 
   const { setIsEnquirePopup } = useContext(StateContext);
-
+  const [auth, setAuth] = useAuth();
+  const navigate = useNavigate()
 
   const [isSticky, setIsSticky] = useState(false);
 
@@ -25,6 +28,19 @@ export default function NavBar() {
       setIsSticky(false);
     }
   };
+
+  const HandleLogout = () => {
+
+    setAuth({
+      ...auth,
+      user: null,
+      token: ""
+    })
+
+    localStorage.removeItem('auth')
+    toast.success("Logout Successful")
+    navigate('/login')
+  }
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -168,18 +184,39 @@ export default function NavBar() {
                 </NavLink>
               </li>
 
-              <li className="menu-item">
-                <NavLink className="menu-link desktop-item" to="/login">
-                  <i className="material-icons">person</i>
-                </NavLink>
-                <input type="checkbox" id="authLink" />
-                <label htmlFor="authLink" className="mobile-item menu-link"><i className="material-icons">person</i></label>
-                <ul className="drop-menu">
-                  <li > <NavLink to="/login">Login</NavLink></li>
-                  <li > <NavLink to="/register">Register</NavLink></li>
-                </ul>
-              </li>
+              {!auth.user ?
 
+                (
+                  <li className="menu-item">
+                    <NavLink className="menu-link desktop-item" to="/login">
+                      <i className="material-icons">person</i>
+                    </NavLink>
+                    <input type="checkbox" id="authLink" />
+                    <label htmlFor="authLink" className="mobile-item menu-link"><i className="material-icons">person</i></label>
+                    <ul className="drop-menu">
+                      <li > <NavLink to="/login">Login</NavLink></li>
+                      <li > <NavLink to="/register">Register</NavLink></li>
+                    </ul>
+                  </li>
+                )
+
+                :
+
+                (
+                  <li className="menu-item">
+                    <NavLink className="menu-link desktop-item" to="/account">
+                      <i className="material-icons">person</i>{!auth.user.Name ? "No Name" : auth.user.Name.substr(0, 5)}
+                    </NavLink>
+                    <input type="checkbox" id="authLink" />
+                    <label htmlFor="authLink" className="mobile-item menu-link"><i className="material-icons">person</i></label>
+                    <ul className="drop-menu">
+                      <li > <span className="menu-link" style={{ cursor: "pointer" }} onClick={HandleLogout}>Logout
+                      </span> </li>
+                      <li > <NavLink to="/register">My Order</NavLink></li>
+                    </ul>
+                  </li>
+                )
+              }
               <li className="menu-item">
                 <NavLink className="menu-link" to="/cart">
                   <i className="material-icons">shopping_cart</i>

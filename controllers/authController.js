@@ -3,7 +3,7 @@ import userModels from "../models/userModels.js";
 
 export const registerController = async (req, res) => {
   try {
-    const { name, email, password, phone, role } = req.body;
+    const { name, email, password, phone, role, address } = req.body;
     if (!name) {
       res.send({
         error: "Name is required",
@@ -40,6 +40,7 @@ export const registerController = async (req, res) => {
       phone,
       role: role || 0,
       password: hashedPassword,
+      address: address,
     }).save();
 
     res.status(201).send({

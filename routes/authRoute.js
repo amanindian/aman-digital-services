@@ -17,4 +17,9 @@ router.post("/login", loginController);
 router.get("/test", requireSigning, isAdmin, testController);
 
 
+router.get("/dashboard", requireSigning, (re, res) => {
+    res.status(200).send("Dashboard Route Acceded")
+});
+
+
 export default router;
