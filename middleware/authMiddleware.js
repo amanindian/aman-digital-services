@@ -4,7 +4,6 @@ import userModels from '../models/userModels.js';
 export const requireSigning = async (req, res, next) => {
     try {
         const decode = JWT.verify(req.headers.authorization, process.env.JWT_SECRET);
-        console.log(decode)
         req.user = decode;
         next();
     } catch (error) {
@@ -26,7 +25,7 @@ export const isAdmin = async (req, res, next) => {
             next()
         }
     } catch (error) {
-        console.log(error)
+        console.error(error)
         res.send(error)
     }
 }

@@ -17,7 +17,7 @@ export default function Banner() {
                 <meta name="description"
                     content="Aman Digital Services offers Web Development, Web Designing, Digital Marketing, and E-Commerce Services. Founded by Aman Kumar, providing expert solutions for your digital needs." />
                 <meta name="keywords" content="Web Development, E-Commerce, Digital Marketing, Web Designing, Aman Digital Services, Aman Kumar, amanindian" />
-                <title> Aman Digital Services</title>
+                <title> Aman Digital Services - Web Development Company </title>
             </Helmet>
             <Slide>
                 {BannerData.map((slideImage, index) => (

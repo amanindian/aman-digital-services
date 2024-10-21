@@ -280,6 +280,11 @@
   }
 }
 
+
+.menu-link.desktop-item{
+  display: flex;
+}
+
 @media screen and (max-width: 1024px) {
   .navmenu .btn {
     display: block;
@@ -455,3 +460,4 @@
 #header.hfe-sticky {
   background: var(--e-global-color-primary);
 }
+

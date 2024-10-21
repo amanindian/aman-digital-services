@@ -21,6 +21,8 @@ import Banner from './Components/Header/Banner'
 import Services from "./Page/Services";
 import Login from "./Page/Login";
 import Register from "./Page/Register";
+import Private from "./Page/Layout/Private";
+import Dashboard from "./Page/user/Dashboard";
 
 
 function App() {
@@ -51,6 +53,9 @@ function App() {
           <Route path="/cart" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/dashboard" element={<Private />}>
+            <Route path="" element={<Dashboard />} />
+          </Route>
           <Route path="/*" Component={PageNotFound} />
         </Routes>
       </main>

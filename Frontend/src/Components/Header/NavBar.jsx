@@ -204,11 +204,13 @@ export default function NavBar() {
 
                 (
                   <li className="menu-item">
-                    <NavLink className="menu-link desktop-item" to="/account">
-                      <i className="material-icons">person</i>{!auth.user.Name ? "No Name" : auth.user.Name.substr(0, 5)}
+                    <NavLink className="menu-link desktop-item d-flex" to="/dashboard">
+                      <i className="material-icons">person</i>
+                      <span>{!auth.user.Name ? "No Name" : auth.user.Name.substr(0, 5)}</span>
                     </NavLink>
+
                     <input type="checkbox" id="authLink" />
-                    <label htmlFor="authLink" className="mobile-item menu-link"><i className="material-icons">person</i></label>
+                    <label htmlFor="authLink" className="mobile-item menu-link d-flex"><i className="material-icons">person</i><span>{!auth.user.Name ? "No Name" : auth.user.Name.substr(0, 5)}</span></label>
                     <ul className="drop-menu">
                       <li > <span className="menu-link" style={{ cursor: "pointer" }} onClick={HandleLogout}>Logout
                       </span> </li>

@@ -17,8 +17,11 @@ router.post("/login", loginController);
 router.get("/test", requireSigning, isAdmin, testController);
 
 
-router.get("/dashboard", requireSigning, (re, res) => {
-    res.status(200).send("Dashboard Route Acceded")
+router.get("/user-auth", requireSigning, (re, res) => {
+    res.status(200).send({
+        ok: true,
+        message: "Dashboard Route Acceded"
+    })
 });
 
 
